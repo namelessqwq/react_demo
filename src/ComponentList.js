@@ -1,12 +1,27 @@
 const { Component } = require("react");
 
-const list = { list }
 
 
 class ComponentList extends Component {
+  static defaultProps = {
+    comments: []
+  }
   render() {
-    return(
-      <div></div>
+    // const comments = [
+    //   { username: 'a', usertext: 'a1' },
+    //   { username: 'b', usertext: 'b1' },
+    //   { username: 'c', usertext: 'c1' },
+    // ]
+    return (
+      <div>
+        {this.props.comments.map((comment, i) => {
+          return (
+            <div key={i} className="comment">
+              <span className="name">{comment.username}</span> : {comment.usertext}
+            </div>
+          )
+        })}
+      </div>
     )
   }
 }

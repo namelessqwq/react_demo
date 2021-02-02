@@ -10,9 +10,10 @@ class ComponentInput extends Component {
   }
 
   handleClick(e) {
-    // const username = this.el.querySelector(".username").value
-    // const usertext = this.el.querySelector(".usertext").value
-    console.log(this.state)
+    if(this.props.onSubmit) {
+      let { username , usertext } = this.state
+      this.props.onSubmit({ username , usertext })
+    }
     e.preventDefault()
   }
 

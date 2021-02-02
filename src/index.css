@@ -68,3 +68,13 @@ code {
   visibility:hidden;
   height: 0;
 }
+
+.comment {
+  padding-bottom: 30px;
+  padding-top: 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.name {
+  color: blue;
+}
